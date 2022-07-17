@@ -5,8 +5,7 @@ At the time of creation of this project, there was oddly no other site providing
 
 
 ### Stack
-
-This is anb Angular 10 app that makes heavy use of Bootstrap and Chart.js. 
+This is an Angular 10 app that makes heavy use of Bootstrap and Chart.js. 
 
 The app is containerized and is built using GCP Cloud Build. Any commits to this repository will spark a new build and new revision in Cloud Run. 
 
@@ -19,13 +18,6 @@ The app is containerized and is built using GCP Cloud Build. Any commits to this
 6. And: ```ng serve```
 7. Navigate to: [http://localhost:4200/](http://localhost:4200/)
 
-### Project Scaffold
-
-Build out python project scaffold:
-
-* [Makefile](https://github.com/michael-welsh/vax-service/blob/main/Makefile)
-* [requirements.txt](https://github.com/michael-welsh/vax-service/blob/main/requirements.txt)
-* [Dockerfile](https://github.com/michael-welsh/vax-service/blob/main/Dockerfile)
 
 
 
