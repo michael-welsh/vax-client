@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header ">
+
+
+      <div class="card-body ">
+        <canvas id="herdChart"></canvas>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+      
+          <div class="col-md-8">
+
+            <!-- Herd Immunity Threshold -->
+            <div ngbDropdown class="d-inline-block" placement="top">
+              Threshold: 
+              <button class="dropdown-toggle btn btn-outline-dark btn-sm" id="thresholdDropdown" ngbDropdownToggle >
+                {{chosenThreshold}}
+              </button>
+          
+                <div ngbDropdownMenu  aria-labelledby="thresholdDropdown">
+                  <button ngbDropdownItem  *ngFor="let option of thresholdOptions" id="option" on-click="chooseThreshold(option)">  {{option}} </button>
+                </div>
+            </div>
+      
+            <!-- Averages measurement -->
+            <div ngbDropdown class="d-inline-block" placement="top">
+              &nbsp; Measurement: 
+              <button class="dropdown-toggle btn btn-outline-dark btn-sm" id="dropdownBasic2" ngbDropdownToggle>
+                {{chosenRollingAverage}}
+              </button>
+
+              <div ngbDropdownMenu  aria-labelledby="rollingAverageDropdown">
+                <button ngbDropdownItem  *ngFor="let average of rollingAverages" id="average" on-click="chooseRollingAverage(average)">  {{average}} </button>
+             </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p>Herd immunity occurs when a large portion of the population becomes immune to a disease, either through vaccination or by developing antibodies to the 
+            disease. The spread of the disease from person to person then becomes more unlikely. 
+            </p>
+            <p>The <span style="font-weight:bold">Threshold </span>is the percentage of the population that is immune to the disease. If the number of immune people surpasses this threshold, the disease
+            will begin to decline. This percentage can be hard to define and varies from disease to disease. For COVID-19, no specific percentage has currently been
+            accepted by the Hong Kong government, making this results of this graph hypothetical.  
+            </p>
+            <p>The <span style="font-weight:bold">Measurement </span>is an average either taken of the last seven days, or since the time COVID-19 vaccinations began
+              in Hong Kong. This too is an imprecise measurement, as we can only speculate on the willingness and/or hesitancy of the Hong Kong public to receive
+              the vaccination moving forward.   
+            </p>
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
